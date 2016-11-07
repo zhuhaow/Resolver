@@ -11,7 +11,7 @@ class ResolverSpec: QuickSpec {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
                     waitUntil(timeout: 6) { done in
-                        expect(Resolver.resolve(hostname: "yahoo.com") { res, error in
+                        expect(Resolver.resolve(hostname: "cloudflare.com") { res, error in
                             result = res
                             errorCode = error
                             done()
@@ -26,7 +26,7 @@ class ResolverSpec: QuickSpec {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
                     waitUntil(timeout: 6) { done in
-                        expect(Resolver.resolve(hostname: "yahoo.com", firstResult: false) { res, error in
+                        expect(Resolver.resolve(hostname: "cloudflare.com", firstResult: false) { res, error in
                             result = res
                             errorCode = error
                             done()
@@ -43,7 +43,7 @@ class ResolverSpec: QuickSpec {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
                     waitUntil(timeout: 6) { done in
-                        expect(Resolver.resolve(hostname: "yahoo.com", qtype: .ipv6) { res, error in
+                        expect(Resolver.resolve(hostname: "cloudflare.com", qtype: .ipv6) { res, error in
                             result = res
                             errorCode = error
                             done()
@@ -58,7 +58,7 @@ class ResolverSpec: QuickSpec {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
                     waitUntil(timeout: 6) { done in
-                        expect(Resolver.resolve(hostname: "yahoo.com", qtype: .ipv6, firstResult: false) { res, error in
+                        expect(Resolver.resolve(hostname: "cloudflare.com", qtype: .ipv6, firstResult: false) { res, error in
                             result = res
                             errorCode = error
                             done()
@@ -75,7 +75,7 @@ class ResolverSpec: QuickSpec {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
                     waitUntil(timeout: 6) { done in
-                        expect(Resolver.resolve(hostname: "0.yahoo.com") { res, error in
+                        expect(Resolver.resolve(hostname: "0.cloudflare.com") { res, error in
                             result = res
                             errorCode = error
                             done()
@@ -91,7 +91,7 @@ class ResolverSpec: QuickSpec {
                 waitUntil(timeout: 8) { done in
                     let semaphore = DispatchSemaphore(value: 1)
                     for i in 0..<count {
-                        expect(Resolver.resolve(hostname: "\(i).yahoo.com") { res, error in
+                        expect(Resolver.resolve(hostname: "\(i).cloudflare.com") { res, error in
                             semaphore.wait()
                             count -= 1
                             if (count == 0) {
