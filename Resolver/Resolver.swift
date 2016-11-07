@@ -22,7 +22,7 @@ public class Resolver {
     fileprivate let timeout: Int
     fileprivate let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global(qos: .utility))
     
-    public static func resolve(hostname: String, qtype: ResolveType = .ipv4, firstResult: Bool = true, timeout: Int = 3, completionHanlder: @escaping (Resolver?, DNSServiceErrorType?)->()) -> Bool {
+    public static func resolve(hostname: String, qtype: ResolveType = .ipv4, firstResult: Bool = true, timeout: Int = 5, completionHanlder: @escaping (Resolver?, DNSServiceErrorType?)->()) -> Bool {
         let resolver = Resolver(hostname: hostname, qtype: qtype, firstResult: firstResult, timeout: timeout)
         resolver.completionHandler = completionHanlder
         return resolver.resolve()

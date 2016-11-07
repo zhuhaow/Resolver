@@ -10,7 +10,7 @@ class ResolverSpec: QuickSpec {
                 it("gives one IP") {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
-                    waitUntil(timeout: 3) { done in
+                    waitUntil(timeout: 6) { done in
                         expect(Resolver.resolve(hostname: "yahoo.com") { res, error in
                             result = res
                             errorCode = error
@@ -25,7 +25,7 @@ class ResolverSpec: QuickSpec {
                 it("gives all IPs") {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
-                    waitUntil(timeout: 3) { done in
+                    waitUntil(timeout: 6) { done in
                         expect(Resolver.resolve(hostname: "yahoo.com", firstResult: false) { res, error in
                             result = res
                             errorCode = error
@@ -42,7 +42,7 @@ class ResolverSpec: QuickSpec {
                 it("gives one IP") {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
-                    waitUntil(timeout: 3) { done in
+                    waitUntil(timeout: 6) { done in
                         expect(Resolver.resolve(hostname: "yahoo.com", qtype: .ipv6) { res, error in
                             result = res
                             errorCode = error
@@ -57,7 +57,7 @@ class ResolverSpec: QuickSpec {
                 it("gives all IPs") {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
-                    waitUntil(timeout: 3) { done in
+                    waitUntil(timeout: 6) { done in
                         expect(Resolver.resolve(hostname: "yahoo.com", qtype: .ipv6, firstResult: false) { res, error in
                             result = res
                             errorCode = error
@@ -74,7 +74,7 @@ class ResolverSpec: QuickSpec {
                 it("gives error") {
                     var result: Resolver?
                     var errorCode: DNSServiceErrorType?
-                    waitUntil(timeout: 5) { done in
+                    waitUntil(timeout: 6) { done in
                         expect(Resolver.resolve(hostname: "0.yahoo.com") { res, error in
                             result = res
                             errorCode = error
@@ -88,7 +88,7 @@ class ResolverSpec: QuickSpec {
             
             it("resolves queries asynchronously") {
                 var count = 100
-                waitUntil(timeout: 5) { done in
+                waitUntil(timeout: 8) { done in
                     let semaphore = DispatchSemaphore(value: 1)
                     for i in 0..<count {
                         expect(Resolver.resolve(hostname: "\(i).yahoo.com") { res, error in
