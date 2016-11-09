@@ -91,7 +91,7 @@ public class Resolver {
                 return false
             }
             
-            timer.activate()
+            timer.resume()
             DNSServiceSetDispatchQueue(ref, DispatchQueue.global(qos: .utility))
             
             return true
