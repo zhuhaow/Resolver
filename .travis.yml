@@ -21,3 +21,4 @@ deploy:
   file: Resolver.framework.zip
   on:
     repo: zhuhaow/Resolver
+    tags: true
