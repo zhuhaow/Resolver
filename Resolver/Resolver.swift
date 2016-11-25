@@ -8,6 +8,8 @@ public enum ResolveType: DNSServiceProtocol {
 }
 
 public class Resolver {
+    fileprivate static let queue = DispatchQueue(label: "ResolverQueue")
+    
     public let hostname: String
     fileprivate let resolveType: ResolveType
     fileprivate let firstResult: Bool
@@ -20,7 +22,7 @@ public class Resolver {
     fileprivate var id: UnsafeMutablePointer<Int>?
     fileprivate var completionHandler: ((Resolver?, DNSServiceErrorType?)->())!
     fileprivate let timeout: Int
-    fileprivate let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global(qos: .utility))
+    fileprivate let timer = DispatchSource.makeTimerSource(queue: Resolver.queue)
     
     public static func resolve(hostname: String, qtype: ResolveType = .ipv4, firstResult: Bool = true, timeout: Int = 3, completionHanlder: @escaping (Resolver?, DNSServiceErrorType?)->()) -> Bool {
         let resolver = Resolver(hostname: hostname, qtype: qtype, firstResult: firstResult, timeout: timeout)
@@ -54,7 +56,9 @@ public class Resolver {
                 }
                 
                 guard errorCode == DNSServiceErrorType(kDNSServiceErr_NoError) else {
-                    resolver.release()
+                    Resolver.queue.sync {
+                        resolver.release()
+                    }
                     return resolver.completionHandler(nil, errorCode)
                 }
                 
@@ -92,7 +96,7 @@ public class Resolver {
             }
             
             timer.resume()
-            DNSServiceSetDispatchQueue(ref, DispatchQueue.global(qos: .utility))
+            DNSServiceSetDispatchQueue(ref, Resolver.queue)
             
             return true
         }
@@ -104,6 +108,8 @@ public class Resolver {
     }
     
     func release() {
+        timer.cancel()
+
         if ref != nil {
             DNSServiceRefDeallocate(ref)
             ref = nil
@@ -112,6 +118,5 @@ public class Resolver {
             _ = dict.remove(id!)
             id = nil
         }
-        timer.cancel()
     }
 }
