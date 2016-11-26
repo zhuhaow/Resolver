@@ -1,5 +1,7 @@
 import Foundation
 
+
+/// This class is not thread-safe.
 class SafeDict<T> {
     private var dict: [Int:T] = [:]
     private var curr = 0
