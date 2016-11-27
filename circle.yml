@@ -15,7 +15,6 @@ test:
     - scan --scheme Resolver-iOS
   post:
     - bash <(curl -s https://codecov.io/bash)
-    - ./docs/build_docs.sh
 deployment:
   release:
     tag: /.*/
