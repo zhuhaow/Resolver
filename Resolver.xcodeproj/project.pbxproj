@@ -89,7 +89,6 @@
 		36342A0A1DD0CE0F0062EF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36342A151DD0CE4C0062EF75 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		36342A161DD0CE4C0062EF75 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		36342A1E1DD0CFAB0062EF75 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		36342A201DD0D0740062EF75 /* bootstrap */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bootstrap; sourceTree = "<group>"; };
 		36342A211DD0D0740062EF75 /* bootstrap-if-needed */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "bootstrap-if-needed"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +134,6 @@
 		363429C31DCE017A0062EF75 = {
 			isa = PBXGroup;
 			children = (
-				36342A1E1DD0CFAB0062EF75 /* .travis.yml */,
 				363429EB1DCF79B00062EF75 /* Cartfile.private */,
 				36342A1F1DD0D0740062EF75 /* bin */,
 				363429CF1DCE017A0062EF75 /* Resolver */,
