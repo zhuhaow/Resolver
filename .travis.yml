@@ -2,8 +2,8 @@ language: objective-c
 osx_image: xcode8.1
 xcode_project: Resolver.xcodeproj
 xcode_scheme: 
-  - Resolver-macOSTests
-  - Resolver-iOSTests
+  - Resolver-macOS
+  - Resolver-iOS
 cache: 
 directories:
 - Carthage
