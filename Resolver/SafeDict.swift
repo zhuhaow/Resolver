@@ -6,6 +6,10 @@ class SafeDict<T> {
     private var dict: [Int:T] = [:]
     private var curr = 0
     
+    var count: Int {
+        return dict.count
+    }
+    
     func insert(value: T) -> UnsafeMutablePointer<Int> {
         let ptr = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         ptr.pointee = curr

@@ -10,6 +10,10 @@ public enum ResolveType: DNSServiceProtocol {
 public class Resolver {
     fileprivate static let queue = DispatchQueue(label: "ResolverQueue")
     
+    public static var activeCount: Int {
+        return dict.count
+    }
+    
     public let hostname: String
     fileprivate let resolveType: ResolveType
     fileprivate let firstResult: Bool

@@ -20,6 +20,7 @@ class ResolverSpec: QuickSpec {
                     expect(result?.result.count) == 1
                     expect(result?.ipv4Result.count) == 1
                     expect(errorCode).to(beNil())
+                    expect(Resolver.activeCount) == 0
                 }
                 
                 it("gives all IPs") {
@@ -35,6 +36,7 @@ class ResolverSpec: QuickSpec {
                     expect(result?.result.count) > 1
                     expect(result?.ipv4Result.count) > 1
                     expect(errorCode).to(beNil())
+                    expect(Resolver.activeCount) == 0
                 }
             }
             
@@ -52,6 +54,7 @@ class ResolverSpec: QuickSpec {
                     expect(result?.result.count) == 1
                     expect(result?.ipv6Result.count) == 1
                     expect(errorCode).to(beNil())
+                    expect(Resolver.activeCount) == 0
                 }
                 
                 it("gives all IPs") {
@@ -67,6 +70,7 @@ class ResolverSpec: QuickSpec {
                     expect(result?.result.count) > 1
                     expect(result?.ipv6Result.count) > 1
                     expect(errorCode).to(beNil())
+                    expect(Resolver.activeCount) == 0
                 }
             }
             
@@ -83,6 +87,7 @@ class ResolverSpec: QuickSpec {
                     }
                     expect(result).to(beNil())
                     expect(errorCode).toNot(beNil())
+                    expect(Resolver.activeCount) == 0
                 }
             }
             
@@ -101,6 +106,7 @@ class ResolverSpec: QuickSpec {
                         }) == true
                     }
                 }
+                expect(Resolver.activeCount) == 0
             }
         }
     }
