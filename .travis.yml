@@ -1,15 +1,14 @@
 language: objective-c
 osx_image: xcode8.1
-xcode_project: Resolver.xcodeproj
-xcode_scheme: 
-  - Resolver-macOS
-  - Resolver-iOS
 cache: 
 directories:
 - Carthage
 install:
 - bin/bootstrap-if-needed
 - gem install scan
+script:
+- scan --scheme Resolver-macOS
+- scan --scheme Resolver-iOS
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 before_deploy:
