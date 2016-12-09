@@ -22,3 +22,4 @@ deploy:
   on:
     repo: zhuhaow/Resolver
     tags: true
+    skip_cleanup: true
