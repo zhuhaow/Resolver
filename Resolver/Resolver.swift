@@ -8,7 +8,19 @@ public enum ResolveType: DNSServiceProtocol {
 }
 
 public class Resolver {
-    public static var queue = {
+    public static var queue: DispatchQueue {
+        get {
+            return _queue
+        }
+        set {
+            _queue.setSpecific(key: queueKey, value: "")
+            _queue = newValue
+            _queue.setSpecific(key: queueKey, value: "ResolverQueue")
+        }
+    }
+    
+    fileprivate static let queueKey = DispatchSpecificKey<String>()
+    private static var _queue = {
         return DispatchQueue(label: "ResolverQueue")
     }()
     
@@ -52,14 +64,14 @@ public class Resolver {
         }
         
         var result: Bool = false
-        Resolver.queue.sync {
+        let action = DispatchWorkItem {
             self.id = dict.insert(value: self)
             
             self.timer.scheduleOneshot(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(self.timeout))
             self.timer.setEventHandler(handler: self.timeoutHandler)
             
-            result = hostname.withCString { (ptr: UnsafePointer<Int8>) in
-                guard DNSServiceGetAddrInfo(&ref, 0, 0, resolveType.rawValue, hostname, { (sdRef, flags, interfaceIndex, errorCode, ptr, address, ttl, context) in
+            result = self.hostname.withCString { (ptr: UnsafePointer<Int8>) in
+                guard DNSServiceGetAddrInfo(&self.ref, 0, 0, self.resolveType.rawValue, self.hostname, { (sdRef, flags, interfaceIndex, errorCode, ptr, address, ttl, context) in
                     // Note this callback block will be called on `Resolver.queue`.
                     
                     guard let resolver = dict.get(context!.bindMemory(to: Int.self, capacity: 1)) else {
@@ -106,7 +118,7 @@ public class Resolver {
                         resolver.release()
                         return resolver.completionHandler(resolver, nil)
                     }
-                }, id) == DNSServiceErrorType(kDNSServiceErr_NoError) else {
+                }, self.id) == DNSServiceErrorType(kDNSServiceErr_NoError) else {
                     return false
                 }
                 
@@ -115,6 +127,13 @@ public class Resolver {
                 return true
             }
         }
+        
+        if DispatchQueue.getSpecific(key: Resolver.queueKey) == "ResolverQueue" {
+            action.perform()
+        } else {
+            Resolver.queue.sync(execute: action)
+        }
+        
         return result
     }
     
