@@ -1,19 +1,19 @@
 language: objective-c
 osx_image: xcode8.1
 cache: 
-directories:
-- Carthage
+  directories:
+    - Carthage
 install:
-- bin/bootstrap-if-needed
-- gem install scan
+  - bin/bootstrap-if-needed
+  - gem install scan
 script:
-- scan --scheme Resolver-macOS
-- scan --scheme Resolver-iOS
+  - scan --scheme Resolver-macOS
+  - scan --scheme Resolver-iOS
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
 before_deploy:
-- carthage build --no-skip-current
-- carthage archive Resolver
+  - carthage build --no-skip-current
+  - carthage archive Resolver
 deploy:
   provider: releases
   skip_cleanup: true
