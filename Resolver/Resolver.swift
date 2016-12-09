@@ -8,7 +8,9 @@ public enum ResolveType: DNSServiceProtocol {
 }
 
 public class Resolver {
-    public static var queue = DispatchQueue(label: "ResolverQueue")
+    public static var queue = {
+        return DispatchQueue(label: "ResolverQueue")
+    }()
     
     public static var activeCount: Int {
         return dict.count
