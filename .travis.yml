@@ -5,10 +5,10 @@ cache:
     - Carthage
 install:
   - bin/bootstrap-if-needed
-  - gem install scan
+  - bundle install
 script:
-  - scan --scheme Resolver-macOS
-  - scan --scheme Resolver-iOS
+  - bundle exec fastlane scan --scheme Resolver-macOS
+  - bundle exec fastlane scan --scheme Resolver-iOS
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 before_deploy:
