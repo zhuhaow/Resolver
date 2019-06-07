@@ -32,7 +32,7 @@ Asynchronous DNS resolver for macOS and iOS
 
   #s.platform = :osx
   s.osx.deployment_target = "10.10"
-  s.ios.deployment_target = "11.0"
+  s.ios.deployment_target = "9.3"
 
   s.source_files = 'Resolver/*'
   s.exclude_files = "Constrictor/Constrictor/*.plist"
