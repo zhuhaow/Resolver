@@ -23,8 +23,6 @@
 		36342A171DD0CE4C0062EF75 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36342A151DD0CE4C0062EF75 /* Quick.framework */; };
 		36342A181DD0CE4C0062EF75 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36342A161DD0CE4C0062EF75 /* Nimble.framework */; };
 		4C975FD089809A8F2D47D214 /* Pods_Resolver_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E888A0B20B520A73DF0AC5A /* Pods_Resolver_iOS.framework */; };
-		ACB4060C22AABC67009C740B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 363429D11DCE017A0062EF75 /* Info.plist */; };
-		ACB4060D22AABC69009C740B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 363429D11DCE017A0062EF75 /* Info.plist */; };
 		ACB4061022AABF93009C740B /* Resolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 363429D01DCE017A0062EF75 /* Resolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB4061122AAC022009C740B /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36342A151DD0CE4C0062EF75 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACB4061222AAC022009C740B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36342A161DD0CE4C0062EF75 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,25 +51,25 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		363429F31DCF7EC40062EF75 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				ACB4061122AAC022009C740B /* Quick.framework in CopyFiles */,
 				ACB4061222AAC022009C740B /* Nimble.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		36342A191DD0CE500062EF75 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				ACB4061322AAC02F009C740B /* Quick.framework in CopyFiles */,
 				ACB4061422AAC02F009C740B /* Nimble.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -389,7 +387,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACB4060C22AABC67009C740B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +394,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACB4060D22AABC69009C740B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,8 +645,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Resolver/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -705,8 +702,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Resolver/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -825,7 +823,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.Resolver;
 				PRODUCT_NAME = Resolver;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -849,7 +847,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.Resolver;
 				PRODUCT_NAME = Resolver;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -872,7 +870,7 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.ResolverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -892,7 +890,7 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.ResolverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
