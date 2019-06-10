@@ -9,6 +9,7 @@ install:
 script:
 - bundle exec fastlane scan --scheme Resolver-macOS
 - bundle exec fastlane scan --scheme Resolver-iOS
+- bundle exec pod lib lint
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 before_deploy:
