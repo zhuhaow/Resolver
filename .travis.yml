@@ -6,6 +6,7 @@ cache:
 install:
 - bin/bootstrap-if-needed
 - bundle install
+- bundle exec pod install
 script:
 - bundle exec fastlane scan --scheme Resolver-macOS
 - bundle exec fastlane scan --scheme Resolver-iOS
