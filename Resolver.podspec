@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Asynchronous DNS resolver for macOS and iOS
+Asynchronous DNS resolver for macOS and iOS written in Swift
                        DESC
 
   s.homepage         = 'https://github.com/zhuhaow/Resolver'
