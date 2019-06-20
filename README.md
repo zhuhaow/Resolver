@@ -9,5 +9,5 @@ github "zhuhaow/Resolver"
 ## CocoaPods
 
 ```
-pod 'Resolver', :git => 'https://github.com/twodayslate/Resolver.git'
+pod 'Resolver', :git => 'https://github.com/zhuhaow/Resolver.git'
 ```
