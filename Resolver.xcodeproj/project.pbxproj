@@ -14,17 +14,18 @@
 		363429EA1DCE135D0062EF75 /* SafeDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363429E91DCE135D0062EF75 /* SafeDict.swift */; };
 		363429EF1DCF7AC20062EF75 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363429ED1DCF7AC20062EF75 /* Quick.framework */; };
 		363429F01DCF7AC20062EF75 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363429EE1DCF7AC20062EF75 /* Nimble.framework */; };
-		363429F41DCF7ED00062EF75 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 363429ED1DCF7AC20062EF75 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		363429F51DCF7ED00062EF75 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 363429EE1DCF7AC20062EF75 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36342A041DD0CE0F0062EF75 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363429FB1DD0CE0F0062EF75 /* Resolver.framework */; };
-		36342A0B1DD0CE0F0062EF75 /* Resolver-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 363429FD1DD0CE0F0062EF75 /* Resolver-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36342A121DD0CE1F0062EF75 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363429E71DCE01940062EF75 /* Resolver.swift */; };
 		36342A131DD0CE1F0062EF75 /* SafeDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363429E91DCE135D0062EF75 /* SafeDict.swift */; };
 		36342A141DD0CE220062EF75 /* ResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363429DB1DCE017A0062EF75 /* ResolverTests.swift */; };
 		36342A171DD0CE4C0062EF75 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36342A151DD0CE4C0062EF75 /* Quick.framework */; };
 		36342A181DD0CE4C0062EF75 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36342A161DD0CE4C0062EF75 /* Nimble.framework */; };
-		36342A1C1DD0CE630062EF75 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36342A151DD0CE4C0062EF75 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36342A1D1DD0CE630062EF75 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36342A161DD0CE4C0062EF75 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC819B6322BBEE6900E0AA9B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AC819B6222BBEE6800E0AA9B /* Podfile */; };
+		ACB4061022AABF93009C740B /* Resolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 363429D01DCE017A0062EF75 /* Resolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB4061122AAC022009C740B /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36342A151DD0CE4C0062EF75 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACB4061222AAC022009C740B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36342A161DD0CE4C0062EF75 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACB4061322AAC02F009C740B /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 363429ED1DCF7AC20062EF75 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACB4061422AAC02F009C740B /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 363429EE1DCF7AC20062EF75 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,25 +48,25 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		363429F31DCF7EC40062EF75 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				363429F41DCF7ED00062EF75 /* Quick.framework in CopyFiles */,
-				363429F51DCF7ED00062EF75 /* Nimble.framework in CopyFiles */,
+				ACB4061122AAC022009C740B /* Quick.framework in CopyFiles */,
+				ACB4061222AAC022009C740B /* Nimble.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		36342A191DD0CE500062EF75 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				36342A1C1DD0CE630062EF75 /* Quick.framework in CopyFiles */,
-				36342A1D1DD0CE630062EF75 /* Nimble.framework in CopyFiles */,
+				ACB4061322AAC02F009C740B /* Quick.framework in CopyFiles */,
+				ACB4061422AAC02F009C740B /* Nimble.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -75,7 +76,6 @@
 		363429D11DCE017A0062EF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		363429D61DCE017A0062EF75 /* Resolver-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Resolver-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		363429DB1DCE017A0062EF75 /* ResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTests.swift; sourceTree = "<group>"; };
-		363429DD1DCE017A0062EF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		363429E71DCE01940062EF75 /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		363429E91DCE135D0062EF75 /* SafeDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeDict.swift; sourceTree = "<group>"; };
 		363429EB1DCF79B00062EF75 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
@@ -83,14 +83,16 @@
 		363429EE1DCF7AC20062EF75 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		363429F11DCF7D4E0062EF75 /* libsystem_dnssd.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystem_dnssd.tbd; path = usr/lib/system/libsystem_dnssd.tbd; sourceTree = SDKROOT; };
 		363429FB1DD0CE0F0062EF75 /* Resolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		363429FD1DD0CE0F0062EF75 /* Resolver-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Resolver-iOS.h"; sourceTree = "<group>"; };
-		363429FE1DD0CE0F0062EF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36342A031DD0CE0F0062EF75 /* Resolver-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Resolver-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36342A0A1DD0CE0F0062EF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36342A151DD0CE4C0062EF75 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		36342A161DD0CE4C0062EF75 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		36342A201DD0D0740062EF75 /* bootstrap */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bootstrap; sourceTree = "<group>"; };
 		36342A211DD0D0740062EF75 /* bootstrap-if-needed */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "bootstrap-if-needed"; sourceTree = "<group>"; };
+		5E888A0B20B520A73DF0AC5A /* Pods_Resolver_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resolver_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6195E0EE7A90F5148B65DF30 /* Pods_Resolver_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resolver_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D9854A4B5823904B4BE77E /* Pods_Resolver_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resolver_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57569562CA0DB00C0B607FE /* Pods_Resolver_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resolver_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC819B6222BBEE6800E0AA9B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,13 +137,14 @@
 			isa = PBXGroup;
 			children = (
 				363429EB1DCF79B00062EF75 /* Cartfile.private */,
+				AC819B6222BBEE6800E0AA9B /* Podfile */,
+				363429D11DCE017A0062EF75 /* Info.plist */,
 				36342A1F1DD0D0740062EF75 /* bin */,
 				363429CF1DCE017A0062EF75 /* Resolver */,
 				363429DA1DCE017A0062EF75 /* ResolverTests */,
-				363429FC1DD0CE0F0062EF75 /* Resolver-iOS */,
-				36342A071DD0CE0F0062EF75 /* Resolver-iOSTests */,
 				363429CE1DCE017A0062EF75 /* Products */,
 				363429EC1DCF7AC20062EF75 /* Frameworks */,
+				9E87871CE85823FC586A5F10 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				363429D01DCE017A0062EF75 /* Resolver.h */,
-				363429D11DCE017A0062EF75 /* Info.plist */,
 				363429E71DCE01940062EF75 /* Resolver.swift */,
 				363429E91DCE135D0062EF75 /* SafeDict.swift */,
 			);
@@ -171,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				363429DB1DCE017A0062EF75 /* ResolverTests.swift */,
-				363429DD1DCE017A0062EF75 /* Info.plist */,
 			);
 			path = ResolverTests;
 			sourceTree = "<group>";
@@ -184,25 +185,12 @@
 				363429F11DCF7D4E0062EF75 /* libsystem_dnssd.tbd */,
 				363429ED1DCF7AC20062EF75 /* Quick.framework */,
 				363429EE1DCF7AC20062EF75 /* Nimble.framework */,
+				5E888A0B20B520A73DF0AC5A /* Pods_Resolver_iOS.framework */,
+				6195E0EE7A90F5148B65DF30 /* Pods_Resolver_iOSTests.framework */,
+				A57569562CA0DB00C0B607FE /* Pods_Resolver_macOS.framework */,
+				71D9854A4B5823904B4BE77E /* Pods_Resolver_macOSTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		363429FC1DD0CE0F0062EF75 /* Resolver-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				363429FD1DD0CE0F0062EF75 /* Resolver-iOS.h */,
-				363429FE1DD0CE0F0062EF75 /* Info.plist */,
-			);
-			path = "Resolver-iOS";
-			sourceTree = "<group>";
-		};
-		36342A071DD0CE0F0062EF75 /* Resolver-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				36342A0A1DD0CE0F0062EF75 /* Info.plist */,
-			);
-			path = "Resolver-iOSTests";
 			sourceTree = "<group>";
 		};
 		36342A1F1DD0D0740062EF75 /* bin */ = {
@@ -212,6 +200,13 @@
 				36342A211DD0D0740062EF75 /* bootstrap-if-needed */,
 			);
 			path = bin;
+			sourceTree = "<group>";
+		};
+		9E87871CE85823FC586A5F10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +224,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36342A0B1DD0CE0F0062EF75 /* Resolver-iOS.h in Headers */,
+				ACB4061022AABF93009C740B /* Resolver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 363429E41DCE017A0062EF75 /* Build configuration list for PBXNativeTarget "Resolver-macOSTests" */;
 			buildPhases = (
+				82BACCFC804B3C9D334CD2E5 /* [CP] Check Pods Manifest.lock */,
 				363429D21DCE017A0062EF75 /* Sources */,
 				363429D31DCE017A0062EF75 /* Frameworks */,
 				363429D41DCE017A0062EF75 /* Resources */,
 				363429F31DCF7EC40062EF75 /* CopyFiles */,
+				3A40397514E576CB79F1965C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,10 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36342A111DD0CE0F0062EF75 /* Build configuration list for PBXNativeTarget "Resolver-iOSTests" */;
 			buildPhases = (
+				453460AE3A284579CE4B437A /* [CP] Check Pods Manifest.lock */,
 				363429FF1DD0CE0F0062EF75 /* Sources */,
 				36342A001DD0CE0F0062EF75 /* Frameworks */,
 				36342A011DD0CE0F0062EF75 /* Resources */,
 				36342A191DD0CE500062EF75 /* CopyFiles */,
+				921F7B1B812E25AC5D6DC9EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC819B6322BBEE6900E0AA9B /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +390,93 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A40397514E576CB79F1965C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Resolver-macOSTests/Pods-Resolver-macOSTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -d \"Carthage\" ] && exit 0\n\n\"${PODS_ROOT}/Target Support Files/Pods-Resolver-macOSTests/Pods-Resolver-macOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		453460AE3A284579CE4B437A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resolver-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -d \"Carthage\" ] && exit 0\n\ndiff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82BACCFC804B3C9D334CD2E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resolver-macOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -d \"Carthage\" ] && exit 0\n\ndiff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		921F7B1B812E25AC5D6DC9EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Resolver-iOSTests/Pods-Resolver-iOSTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -d \"Carthage\" ] && exit 0\n\n\"${PODS_ROOT}/Target Support Files/Pods-Resolver-iOSTests/Pods-Resolver-iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		363429C81DCE017A0062EF75 /* Sources */ = {
@@ -492,7 +579,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -547,7 +636,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -568,7 +659,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Resolver/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -596,7 +687,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Resolver/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -614,13 +705,13 @@
 		363429E51DCE017A0062EF75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = ResolverTests/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.ResolverTests;
@@ -632,13 +723,13 @@
 		363429E61DCE017A0062EF75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = ResolverTests/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.ResolverTests;
@@ -657,11 +748,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Resolver-iOS/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.Resolver;
 				PRODUCT_NAME = Resolver;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -680,11 +771,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Resolver-iOS/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.Resolver;
 				PRODUCT_NAME = Resolver;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -697,16 +788,16 @@
 		36342A0E1DD0CE0F0062EF75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Resolver-iOSTests/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.ResolverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -716,16 +807,16 @@
 		36342A0F1DD0CE0F0062EF75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Resolver-iOSTests/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.ios.Resolver-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.ResolverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
