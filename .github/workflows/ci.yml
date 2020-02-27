@@ -3,7 +3,7 @@ name: CI
 on: [pull_request, push]
 
 jobs:
-  build:
+  test:
     strategy:
       matrix:
         sdk: [macosx, iphoneos]
@@ -14,5 +14,5 @@ jobs:
         run: bundle install
       - name: Generate Xcode project
         run: bundle exec fastlane run spm command:generate-xcodeproj
-      - name: Build target
-        run: bundle exec fastlane run gym sdk:${{ matrix.sdk }}
+      - name: Test target
+        run: bundle exec fastlane run scan sdk:${{ matrix.sdk }}
