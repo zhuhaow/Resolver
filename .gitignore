@@ -157,3 +157,16 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Created by https://www.gitignore.io/api/swiftpackagemanager
+# Edit at https://www.gitignore.io/?templates=swiftpackagemanager
+
+### SwiftPackageManager ###
+Packages
+.build/
+xcuserdata
+DerivedData/
+*.xcodeproj
+
+
+# End of https://www.gitignore.io/api/swiftpackagemanager
