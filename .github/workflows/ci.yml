@@ -3,16 +3,19 @@ name: CI
 on: [pull_request, push]
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        sdk: [macosx, iphoneos]
+  macOS:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Bundle
-        run: bundle install
-      - name: Generate Xcode project
-        run: bundle exec fastlane run spm command:generate-xcodeproj
       - name: Test target
-        run: bundle exec fastlane run scan sdk:${{ matrix.sdk }}
+        run: swift test -v
+  iOS:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test target
+        run: >
+          swift test -v
+          -Xswiftc "-sdk"
+          -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`"
+          -Xswiftc "-target" -Xswiftc "x86_64-apple-ios13-simulator"
